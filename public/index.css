@@ -1,0 +1,80 @@
+:root {
+    --blackish: #222;
+    --whiteish: #e5e5e5;
+    --red:  #ff5e56;
+    --yellow: #ffbd2e;
+    --green: #27c93f;
+    --backgroundSize: 70%;
+  }
+  
+  body {
+    box-sizing: border-box;
+    margin:0;
+    height: 100vh;
+    font-family: 'Pacifico', Georgia, Times, 'Times New Roman', serif;
+    background-image: url(https://thumbs.dreamstime.com/b/print-257474542.jpg);
+    background-size: var(--backgroundSize);
+    color: var(--whiteish);
+    animation: movingBackground 7s linear infinite;
+  }
+  /* body:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.9);
+    z-index: 1;
+  } */
+  @keyframes movingBackground {
+    from { background-position: 100% 0; }
+    to { background-position: 0 0; }
+  }  
+  /* @keyframes movingBackground {
+    from { background-position: 0 0;}   
+    to {background-position: var(--backgroundSize) var(--backgroundSize);}
+  } */
+  .modal {
+    width: clamp(50vw, 50vh, 90vw);
+    height: 40vh;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  .topbar {
+    width: 100%;
+    height: 38vh;
+    align-content: flex-start;
+    align-self: flex-start
+  }
+  .dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: hotpink;
+    margin: 12px 0 0 12px;
+  }
+  .red {
+    background: var(--red);
+  }
+  .yellow{
+    background: var(--yellow);
+  }
+  .green{
+    background: var(--green);
+  }
+  .avatar {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 20px 10px rgba(0,0,0,0.4);
+  }
+  .twitter-logo {
+    width: 25px;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
